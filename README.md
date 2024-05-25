@@ -1,8 +1,29 @@
-# Welcome to your Expo app 👋
+# Star Wars RN GraphQL App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a simple project created to learn more about GraphQL and the Apollo GraphQL Client.
 
-## Get started
+## Table of Content:
+
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Start your Application](#start-your-application)
+
+## Screenshots
+
+<div style="flex-direction: row;">
+  <img src="https://i.imgur.com/6VUDhe2.png" alt="List of movies in dark mode" height="500" />
+  <img src="https://i.imgur.com/ZH9DjK8.png" alt="List of movies in light mode" height="500" />
+</div>
+
+## Technologies
+
+This project was developed using React Native and other libraries such as:
+
+- Expo
+- GraphQL
+- Apollo GraphQL Client
+
+## Start your Application
 
 1. Install dependencies
 
@@ -15,36 +36,4 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    ```bash
     npx expo start
    ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+   
