@@ -1,4 +1,5 @@
 import { useColorScheme } from "@/hooks/useColorScheme/useColorScheme";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import {
   DarkTheme,
   DefaultTheme,
@@ -9,6 +10,11 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+
+const client = new ApolloClient({
+  uri: "https://swapi-graphql.netlify.app/.netlify/functions/index",
+  cache: new InMemoryCache(),
+});
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -30,10 +36,12 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-    </ThemeProvider>
+    <ApolloProvider client={client}>
+      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
+      </ThemeProvider>
+    </ApolloProvider>
   );
 }
